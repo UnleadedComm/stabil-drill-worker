@@ -43,6 +43,6 @@ export default {
 
 		console.log(result);
 
-		return docRef.id;
+		return new Response('Hello World!');
 	},
 };
