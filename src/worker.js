@@ -35,20 +35,14 @@ export default {
 
 		const db = getFirestore(app);
 
-		console.log(db);
-
-		const collRef = doc(collection(db, 'contact-form-2023'));
-
-		console.log(collRef);
-
-		const result = await setDoc(collRef, {
+		const docRef = await addDoc(collection(db, 'contact-form'), {
 			firstName: 'David',
 			lastName: 'Garcia',
 			email: 'dgarcia@ulcomm.com',
 		});
 
-		console.log(result.id);
+		console.log(result);
 
-		return new Response(result);
+		return docRef.id;
 	},
 };
