@@ -12,6 +12,7 @@
     "wrangler": "^3.0.0"
   },
   "dependencies": {
+    "@sagi.io/workers-jwt": "^0.0.23",
     "firebase": "^9.23.0"
   }
 }
